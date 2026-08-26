@@ -1,0 +1,21 @@
+[user]
+    email = patrick1031wang@gmail.com
+    name = RenChu Wang
+[core]
+    excludesFile = ~/.gitignore
+    editor = codium --reuse-window --wait --disable-workspace-trust
+    ignorecase = false
+[push]
+    autoSetupRemote = true
+[rebase]
+    stat = true
+    instructionFormat = %ad %s
+[remote "origin"]
+    prune = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    dark = true
+[diff]
+    wordregex = [a-zA-Z0-9_]+|[^[:space:]]
