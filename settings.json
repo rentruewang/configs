@@ -28,7 +28,7 @@
         "**/.venv/": true
     },
     "files.insertFinalNewline": true,
-    "git.autofetch": true,
+    "git.blame.editorDecoration.disableHover": false,
     "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
     "search.useGlobalIgnoreFiles": true,
