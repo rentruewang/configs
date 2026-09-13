@@ -3,7 +3,7 @@
     name = RenChu Wang
 [core]
     excludesFile = ~/.gitignore
-    editor = codium --reuse-window --wait --disable-workspace-trust
+    editor = codium --wait --disable-workspace-trust --disable-extensions
     ignorecase = false
 [push]
     autoSetupRemote = true
