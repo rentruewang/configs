@@ -9,7 +9,7 @@
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "underline",
-    "editor.fontFamily": "Cascadia Code",
+    "editor.fontFamily": "Source Code Pro",
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "editor.formatOnSave": true,
