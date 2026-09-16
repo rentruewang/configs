@@ -20,14 +20,6 @@
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoSave": "onFocusChange",
-    "files.exclude": {
-        "**/__pycache__/": true,
-        "**/.cache/": true,
-        "**/.mypy_cache/": true,
-        "**/.nox/": true,
-        "**/.pytest_cache/": true,
-        "**/.venv/": true
-    },
     "files.insertFinalNewline": true,
     "git.blame.editorDecoration.disableHover": false,
     "git.blame.editorDecoration.enabled": true,
