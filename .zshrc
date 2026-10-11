@@ -103,28 +103,32 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Created by `pipx` on 2025-05-09 03:15:08
-export PATH="$PATH:$HOME/.local/bin:$HOME/.fzf/bin"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export DYLD_LIBRARY_PATH=/opt/homebrew/opt/libomp/lib:$DYLD_LIBRARY_PATH
 
 alias python=python3
 
+export PATH="$PATH:$HOME/.local/bin:$HOME/.fzf/bin"
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --strip-cwd-prefix"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export DYLD_LIBRARY_PATH=/opt/homebrew/opt/libomp/lib:$DYLD_LIBRARY_PATH
-
-alias rsync="rsync -av --filter=':- .gitignore' --exclude=.git"
-alias tree="tree --gitignore"
 
 export EDITOR=/opt/homebrew/bin/micro
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # Only run within iterm.
 if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
   export GIT_EDITOR=micro
 fi
+
+# Clear local branches after merge.
+alias github-clean-outdated="github-outdated | xargs git branch -D"
+alias github-outdated="gh pr list --state merged --author @me --limit 500 --json headRefName --jq '.[].headRefName' \
+  | sort -u \
+  | comm -12 - <(git branch --format '%(refname:short)' | sort) \
+  | grep -vx main"
+
+# Convenient alias.
+alias rsync="rsync -av --filter=':- .gitignore' --exclude=.git"
+alias tree="tree --gitignore"
