@@ -132,3 +132,6 @@ alias github-outdated="gh pr list --state merged --author @me --limit 500 --json
 # Convenient alias.
 alias rsync="rsync -av --filter=':- .gitignore' --exclude=.git"
 alias tree="tree --gitignore"
+
+# No telemtry
+export GH_TELEMETRY=false
