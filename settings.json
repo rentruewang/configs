@@ -3,6 +3,7 @@
     "chat.disableAIFeatures": true,
     "diffEditor.codeLens": true,
     "diffEditor.experimental.showMoves": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.renderSideBySide": true,
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "smooth",

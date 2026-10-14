@@ -135,3 +135,6 @@ alias tree="tree --gitignore"
 
 # No telemtry
 export GH_TELEMETRY=false
+
+# Python path.
+export PYTHONSAFEPATH=1
