@@ -38,6 +38,7 @@
     "git.blame.editorDecoration.disableHover": false,
     "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
+    "python.analysis.autoImportCompletions": false,
     "python.languageServer": "Default",
     "search.useGlobalIgnoreFiles": true,
     "security.workspace.trust.enabled": false,
