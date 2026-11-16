@@ -70,7 +70,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,6 +133,7 @@ alias github-outdated="gh pr list --state merged --author @me --limit 500 --json
 alias rsync="rsync -av --no-W --filter=':- .gitignore' --exclude=.git"
 alias tree="tree --gitignore"
 alias find=bfs
+alias codiff="codium --disable-extensions --wait --skip-add-to-recently-opened --diff"
 
 # No telemtry
 export GH_TELEMETRY=false
